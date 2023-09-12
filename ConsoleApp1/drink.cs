@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+﻿namespace ConsoleApp1
 {
     internal class Drink
     {
-        public string Name { get; set; }
-        public string Size { get; set; }
+        public String Name { get; set; }
+        public String Size { get; set; }
         public int Price { get; set; }
     }
 }
