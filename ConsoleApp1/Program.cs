@@ -101,7 +101,7 @@ namespace ConsoleApp1
             //    Console.WriteLine($"{drinks[i].Name} {drinks[i].Size} {drinks[i].Price}");
             //}
             Console.WriteLine("飲料清單\n");
-            Console.WriteLine(String.Format("{0,-5}{1,-5}{2,5}{3,7}","編號","品名","大小","價格"));
+            Console.WriteLine(String.Format("{0,-5}{1,-5}{2,5}{3,7}","編號","品名","大中","價格"));
             int i = 0;
             foreach (Drink drink in myDrinks)
             {
@@ -113,14 +113,14 @@ namespace ConsoleApp1
         private static void AddNewDrink(List<Drink> myDrinks)
         {
             //新增飲料品項
-            //Drink drink1 = new Drink() { Name = "紅茶", Size = "大杯", Price = 50 };
+            //Drink drink1 = new Drink() { Name = "紅茶", Size = "大杯", Price = 30 };
             //drinks.Add(drink1);
-            myDrinks.Add(new Drink() { Name = "紅茶", Size = "大杯", Price = 50 });
-            myDrinks.Add(new Drink() { Name = "紅茶", Size = "小杯", Price = 30 });
-            myDrinks.Add(new Drink() { Name = "綠茶", Size = "大杯", Price = 50 });
-            myDrinks.Add(new Drink() { Name = "綠茶", Size = "小杯", Price = 30 });
+            myDrinks.Add(new Drink() { Name = "紅茶", Size = "大杯", Price = 30 });
+            myDrinks.Add(new Drink() { Name = "紅茶", Size = "中杯", Price = 20 });
+            myDrinks.Add(new Drink() { Name = "綠茶", Size = "大杯", Price = 25 });
+            myDrinks.Add(new Drink() { Name = "綠茶", Size = "中杯", Price = 20 });
             myDrinks.Add(new Drink() { Name = "咖啡", Size = "大杯", Price = 60 });
-            myDrinks.Add(new Drink() { Name = "咖啡", Size = "小杯", Price = 40 });
+            myDrinks.Add(new Drink() { Name = "咖啡", Size = "中杯", Price = 50 });
         }
     }
 }
