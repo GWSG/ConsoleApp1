@@ -75,6 +75,13 @@ namespace ConsoleApp1
                     break;
                 }
                 else index = Convert.ToInt32(s);
+                
+                  if (index < 1 || index >=6)
+                    {
+                        Console.WriteLine("沒有這個編號，請輸入0-6的編號");
+                        continue;
+                    }
+                
                 Drink drink = myDrinks[index];
 
                 Console.Write("請輸入數量？ ");
