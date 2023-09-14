@@ -78,7 +78,7 @@ namespace ConsoleApp1
                 
                 else index = Convert.ToInt32(s);
                 
-                  if (index < 1 || index >=6)
+                  if (index <= -1 || index >= 6)
                     {
                         Console.WriteLine("沒有這個編號，請輸入目前已出現的編號");
                         continue;
