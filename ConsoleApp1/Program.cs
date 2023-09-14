@@ -61,7 +61,7 @@ namespace ConsoleApp1
         private static void OrderDrink(List<Drink> myDrinks, List<OrderItem> myOrders)
         {
             Console.WriteLine();
-            Console.WriteLine("請開始訂購飲料，按下x鍵，並按下Enter鍵就可以完成客人您的訂單。");
+            Console.WriteLine("請開始訂購飲料，按下x鍵，並按下Enter鍵離開。");
             string s;
             int index, quantity, subtotal;
             while (true)
@@ -77,15 +77,13 @@ namespace ConsoleApp1
                 }
                 
                 else index = Convert.ToInt32(s);
-
-
-                if (index < 0 || index >= 6)
-                {
-                    Console.WriteLine("沒有這個編號，請輸入目前有飲料的編號");
-                    continue;
-                }
-
-
+                
+                  if (index < 1 || index >=6)
+                    {
+                        Console.WriteLine("沒有這個編號，請輸入0-6的編號");
+                        continue;
+                    }
+                
                 Drink drink = myDrinks[index];
 
                 Console.Write("請輸入數量？ ");
