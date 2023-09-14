@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System; 
 using System.Collections.Generic;
 
 namespace ConsoleApp1
@@ -61,11 +61,12 @@ namespace ConsoleApp1
         private static void OrderDrink(List<Drink> myDrinks, List<OrderItem> myOrders)
         {
             Console.WriteLine();
-            Console.WriteLine("請開始訂購飲料，按下x鍵離開。");
+            Console.WriteLine("請開始訂購飲料，按下x鍵，並按下Enter鍵就可以完成客人您的訂單。");
             string s;
             int index, quantity, subtotal;
             while (true)
             {
+                
                 Console.Write("請輸入品名編號？ ");
                 s = Console.ReadLine();
                 if (s == "x")
@@ -74,7 +75,17 @@ namespace ConsoleApp1
                     Console.WriteLine("謝謝惠顧，歡迎下次再來。");
                     break;
                 }
+                
                 else index = Convert.ToInt32(s);
+
+
+                if (index < 0 || index >= 6)
+                {
+                    Console.WriteLine("沒有這個編號，請輸入目前有飲料的編號");
+                    continue;
+                }
+
+
                 Drink drink = myDrinks[index];
 
                 Console.Write("請輸入數量？ ");
@@ -86,6 +97,8 @@ namespace ConsoleApp1
                     break;
                 }
                 else quantity = Convert.ToInt32(s);
+
+                
                 subtotal = drink.Price * quantity;
 
                 Console.WriteLine($"您訂購{drink.Name}{drink.Size}{quantity}杯，每杯{drink.Price}元，小計{subtotal}元");
