@@ -80,7 +80,7 @@ namespace ConsoleApp1
                 
                   if (index < 1 || index >=6)
                     {
-                        Console.WriteLine("沒有這個編號，請輸入編號上有的數字");
+                        Console.WriteLine("沒有這個編號，請輸入目前佔有的編號");
                         continue;
                     }
                 
