@@ -61,7 +61,7 @@ namespace ConsoleApp1
         private static void OrderDrink(List<Drink> myDrinks, List<OrderItem> myOrders)
         {
             Console.WriteLine();
-            Console.WriteLine("請開始訂購飲料，按下x鍵，並按下Enter鍵離開。");
+            Console.WriteLine("請開始訂購飲料，按下x鍵，並按下Enter鍵結束訂單。");
             string s;
             int index, quantity, subtotal;
             while (true)
